@@ -19,6 +19,7 @@
   "main": "lib/cjs/index.js",
   "typings": "lib/cjs/index.d.ts",
   "types": "lib/cjs/index.d.ts",
+  "files": [ "lib/cjs/* "],
   "peerDependencies": {
     "@cycle/react": "^2.2.0",
     "react": ">=18",
