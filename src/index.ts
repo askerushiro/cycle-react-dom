@@ -1,13 +1,14 @@
 import {Stream} from 'xstream';
 import {ReactElement, createElement} from 'react';
-import {render} from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {ReactSource, makeCycleReactComponent} from '@cycle/react';
 
 export function makeDOMDriver(container: any) {
   return function domDriver(sink: Stream<ReactElement<any>>) {
     const source = new ReactSource();
     const Root = makeCycleReactComponent(() => ({source, sink}));
-    render(createElement(Root), container);
+    const reactRoot = createRoot(container)
+    reactRoot.render(createElement(Root))
     return source;
   };
 }
