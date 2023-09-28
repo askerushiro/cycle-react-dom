@@ -21,8 +21,8 @@
   "types": "lib/cjs/index.d.ts",
   "peerDependencies": {
     "@cycle/react": "^2.2.0",
-    "react": ">=16.4.x",
-    "react-dom": ">=16.4.x",
+    "react": ">=18",
+    "react-dom": ">=18",
     "xstream": "11.x.x"
   },
   "devDependencies": {
@@ -40,8 +40,8 @@
     "karma-typescript": "^3.0.12",
     "karma-typescript-es6-transform": "^1.0.4",
     "mocha": "^5.2.0",
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "ts-node": "^7.0.1",
     "typescript": "^3.4.5",
     "xstream": "11.x.x"
