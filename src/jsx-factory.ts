@@ -1,4 +1,4 @@
-import { createElement, ReactElement, ReactType } from 'react';
+import { createElement, ElementType, InputHTMLAttributes, ReactElement } from 'react';
 import { incorporate } from '@cycle/react';
 export { Attributes } from 'react';
 
@@ -19,8 +19,8 @@ type PropsExtensions = {
   sel?: string | symbol;
 }
 
-function createIncorporatedElement<P = any>(
-  type: ReactType<P>,
+function createIncorporatedElement<P extends InputHTMLAttributes<HTMLInputElement> = any>(
+  type: ElementType<P>,
   props: P & PropsExtensions | null,
   ...children: Array<string | ReactElement<any>>
 ): ReactElement<P> {

@@ -1,5 +1,5 @@
 import {h} from '@cycle/react';
-import {ReactElement} from 'react';
+import {ElementType, ReactElement} from 'react';
 
 function parseShortcut(param: any) {
   if (typeof param === 'symbol') {
@@ -20,7 +20,7 @@ function parseShortcut(param: any) {
   return {id, className, sel};
 }
 
-function createTagFunction(tagName: string): Function {
+function createTagFunction(tagName: ElementType): Function {
   return function hyperscript(a: any, b?: any, c?: any): ReactElement<any> {
     const hasA = typeof a !== 'undefined';
     const hasB = typeof b !== 'undefined';
@@ -143,7 +143,7 @@ const SVG_TAG_NAMES = [
 const svg = createTagFunction('svg');
 
 SVG_TAG_NAMES.forEach(tag => {
-  svg[tag] = createTagFunction(tag);
+  svg[tag] = createTagFunction(tag as ElementType);
 });
 
 const TAG_NAMES = [
@@ -258,7 +258,7 @@ const exported = {
   createTagFunction,
 };
 TAG_NAMES.forEach(n => {
-  exported[n] = createTagFunction(n);
+  exported[n] = createTagFunction(n as ElementType);
 });
 export default (exported as any) as HyperScriptHelpers;
 
