@@ -21,13 +21,12 @@
   "types": "lib/cjs/index.d.ts",
   "files": [ "lib/cjs/* "],
   "peerDependencies": {
-    "@cycle/react": "^2.2.0",
     "react": ">=18",
     "react-dom": ">=18",
     "xstream": "11.x.x"
   },
   "devDependencies": {
-    "@cycle/react": "^2.7.0",
+    "@cycle/react": "github:askerushiro/cycle-react#react-18",
     "@cycle/run": "^5.1.0",
     "@types/mocha": "^2.2.40",
     "@types/node": "^10.5.2",
