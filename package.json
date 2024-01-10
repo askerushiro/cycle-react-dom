@@ -50,7 +50,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "npm run compile",
+    "prepare": "npm run compile-cjs",
     "prepublishOnly": "npm run compile",
     "compile": "npm run compile-cjs && npm run compile-es6",
     "compile-cjs": "tsc --module commonjs --outDir ./lib/cjs",
